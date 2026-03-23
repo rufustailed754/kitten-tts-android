@@ -4,11 +4,21 @@ On-device text-to-speech Android app powered by [KittenML](https://github.com/Ki
 
 Ported from the [iOS version](https://github.com/user/kitten-tts-ios) (Swift/SwiftUI) to Kotlin/Jetpack Compose.
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/main-screen.jpg" width="300" alt="Main Screen" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="screenshots/generated-audio.jpg" width="300" alt="Generated Audio with Play and Download" />
+</p>
+
 ## Features
 
 - 3 model sizes: **Nano** (15M), **Micro** (40M), **Mini** (80M)
 - 8 voices: Rosie, Bella, Jasper, Luna, Bruno, Hugo, Kiki, Leo
 - Adjustable speed (0.5x – 2.0x)
+- Download generated audio as WAV
+- Long text support (auto-chunking and concatenation)
 - 100% on-device inference via ONNX Runtime
 - Dark theme UI matching the iOS version
 
