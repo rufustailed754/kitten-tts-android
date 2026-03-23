@@ -17,21 +17,22 @@ Ported from the [iOS version](https://github.com/user/kitten-tts-ios) (Swift/Swi
 - 3 model sizes: **Nano** (15M), **Micro** (40M), **Mini** (80M)
 - 8 voices: Rosie, Bella, Jasper, Luna, Bruno, Hugo, Kiki, Leo
 - Adjustable speed (0.5x – 2.0x)
-- Download generated audio as WAV
-- Long text support (auto-chunking and concatenation)
+- Download generated audio as WAV to device
+- **Long text / large context support** — paste entire articles, stories, or paragraphs. Text is automatically split into chunks at sentence boundaries, each chunk is synthesized independently, and the audio is seamlessly concatenated into a single output.
 - 100% on-device inference via ONNX Runtime
 - Dark theme UI matching the iOS version
 
 ## Architecture
 
 ```
-Text Input
-  → Chunking (max 400 chars at sentence boundaries)
-  → Punctuation normalization
-  → espeak-ng phonemization (JNI/NDK)
-  → IPA tokenization (178-token vocabulary)
-  → ONNX Runtime inference (24kHz Float32 PCM)
-  → AudioTrack playback
+Text Input (any length)
+  → Auto-chunking (max 400 chars at sentence boundaries)
+  → Per-chunk: Punctuation normalization
+  → Per-chunk: espeak-ng phonemization (JNI/NDK)
+  → Per-chunk: IPA tokenization (178-token vocabulary)
+  → Per-chunk: ONNX Runtime inference (24kHz Float32 PCM)
+  → Concatenate all chunk audio
+  → AudioTrack playback / WAV download
 ```
 
 ### Tech Stack
