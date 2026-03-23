@@ -355,7 +355,7 @@ class KittenTTSEngine(private val context: Context) {
 
         val results = session.run(inputs, setOf("waveform"))
 
-        val waveformTensor = results.get("waveform").get() as OnnxTensor
+        val waveformTensor = results[0] as OnnxTensor
         val rawSamples = waveformTensor.floatBuffer
         val totalSamples = rawSamples.remaining()
         val trimCount = minOf(5000, totalSamples)
